@@ -5,4 +5,8 @@ app.get('/', function (req, res) {
   res.send('Hola Mundo 19/4/22 22hs')
 })
 
-app.listen(3000)
+const PORT =process.env.PORT || 3000
+
+app.listen(PORT, function(){
+    console.log("Servidor escuchando en el puerto: ", PORT)
+})
